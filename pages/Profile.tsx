@@ -98,7 +98,7 @@ const Profile = () => {
                                    {order.details.comment && <p><span className="text-stone-600">Комментарий:</span> {order.details.comment}</p>}
                                    <div className="flex gap-4">
                                       {order.details.wood && <p><span className="text-stone-600">Дерево:</span> {order.details.wood}</p>}
-                                      {order.details.finish && <p><span className="text-stone-600">Лак:</span> {order.details.finish}</p>}
+                                      {order.details.varnish && <p><span className="text-stone-600">Лак:</span> Да</p>}
                                    </div>
                                 </div>
                             )}

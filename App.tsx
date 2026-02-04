@@ -14,12 +14,21 @@ const App = () => {
   const [showCookieBanner, setShowCookieBanner] = useState(false);
 
   useEffect(() => {
+     // Log visitor
      mockApi.logVisitor();
+
+     // Cookie Consent Logic
      const consent = localStorage.getItem('element_cookie_consent');
      if (consent === 'true') {
          setCookieConsent(true);
      } else {
          setTimeout(() => setShowCookieBanner(true), 4000); 
+     }
+
+     // Telegram WebApp Initialization
+     if (window.Telegram?.WebApp) {
+        window.Telegram.WebApp.ready();
+        window.Telegram.WebApp.expand(); // Разворачиваем на весь экран
      }
   }, []);
 

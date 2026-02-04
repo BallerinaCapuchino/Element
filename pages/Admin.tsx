@@ -275,7 +275,7 @@ const Admin = () => {
                                         <td className="px-6 py-4">
                                             <div className="flex flex-col gap-1">
                                                 <span className="text-stone-300">{order.details.wood || '—'}</span>
-                                                <span className="text-xs text-stone-500">{order.details.finish || '—'}</span>
+                                                <span className="text-xs text-stone-500">{order.details.varnish ? 'Лак' : '—'}</span>
                                             </div>
                                         </td>
                                         <td className="px-6 py-4 max-w-xs truncate" title={order.details.comment}>

@@ -85,7 +85,7 @@ const MaterialVisualizer: React.FC<MaterialVisualizerProps> = ({
                     <div className="w-2/3 h-full relative overflow-hidden border-r border-stone-900/50">
                          <motion.div 
                            className="absolute inset-0 z-0 transition-colors duration-700"
-                           style={{ backgroundColor: selectedWood.color }}
+                           style={{ backgroundColor: selectedWood.color } as any}
                          />
                          {!selectedWood.isCustom && (
                              <div 
@@ -107,7 +107,7 @@ const MaterialVisualizer: React.FC<MaterialVisualizerProps> = ({
                              <>
                                  <motion.div 
                                     className="absolute inset-0 z-0 transition-colors duration-500"
-                                    style={{ backgroundColor: selectedInterior.color }}
+                                    style={{ backgroundColor: selectedInterior.color } as any}
                                  />
                                  <div className={`absolute inset-0 z-10 opacity-30 ${
                                      selectedInterior.type === 'velvet' ? "bg-[url('https://www.transparenttextures.com/patterns/felt.png')]" :

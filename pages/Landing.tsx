@@ -201,7 +201,7 @@ const Landing: React.FC<LandingProps> = ({ hasConsented, requestConsent }) => {
 
       {/* Hero Section */}
       <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden">
-        <motion.div style={{ y, opacity }} className="absolute inset-0 z-0">
+        <motion.div style={{ y, opacity } as any} className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/60 z-10" />
           <img src="images/preview.png" alt="Preview" className="w-full h-full object-cover grayscale brightness-50" />
         </motion.div>

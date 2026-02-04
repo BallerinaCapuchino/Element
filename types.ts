@@ -1,5 +1,36 @@
 import React from 'react';
 
+// Extend window object for Telegram
+declare global {
+  interface Window {
+    Telegram: {
+      WebApp: {
+        ready: () => void;
+        expand: () => void;
+        close: () => void;
+        MainButton: {
+          text: string;
+          color: string;
+          textColor: string;
+          isVisible: boolean;
+          isActive: boolean;
+          show: () => void;
+          hide: () => void;
+          onClick: (callback: () => void) => void;
+        };
+        initDataUnsafe?: any;
+        themeParams: {
+          bg_color?: string;
+          text_color?: string;
+          hint_color?: string;
+          button_color?: string;
+          button_text_color?: string;
+        };
+      };
+    };
+  }
+}
+
 export interface ServiceItem {
   id: number;
   title: string;
@@ -80,6 +111,8 @@ export interface Order {
     lodgement?: boolean;
     varnish?: boolean;
     comment?: string;
-    contactMethod?: string; 
+    contactMethod?: string;
+    contactEmail?: string;
+    finish?: string;
   };
 }
